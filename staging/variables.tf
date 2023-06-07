@@ -13,25 +13,10 @@ variable "virtual_network_name" {
     description = "name of the virtual network"
 }
 
-# variable "virtual_network_address_space" {
-#     type = list(string)
-#     description = "address space of the virtual network"
-# }
-
-# variable "subnet_name" {
-#     type = string
-#     description = "name of the subnet"
-# }
-
-variable "subnet_id" {
+variable "subnet_name" {
     type = string
     description = "name of the subnet"
 }
-
-# variable "subnet_address_prefix" {
-#     type = string
-#     description = "address prefix of the subnet"
-# }
 
 variable "vmname" {
     type = string
@@ -58,28 +43,20 @@ variable "admin_password" {
     description = "password of the local admin user"
 }
 
-# variable "image_publisher" {
+# variable "vault_username_secret_path" {
 #     type = string
-#     description = "Azure image publisher"
-#     default = "myPublisher"
+#     description = "local admin user of the virtual machine"
 # }
 
-# variable "image_offer" {
+# variable "vault_password_secret_path" {
 #     type = string
-#     description = "Azure image offer"
-#     default = "myOffer"
+#     description = "local admin user of the virtual machine"
 # }
 
-# variable "image_sku" {
-#     type = string
-#     description = "Azure image sku"
-#     default = "mySKU"
-# }
-
-# variable "image_version" {
-#     type = string
-#     description = "Azure image sku"  
-# }
+variable "image_version" {
+    type = string
+    description = "Azure image version"  
+}
 
 variable "image_name" {
     type = string
@@ -90,3 +67,13 @@ variable "image_gallery" {
     type = string
     description = "Azure image gallery"  
 }
+
+# variable "VAULT_ADDR" {
+#     type = string
+#     description = "address of vault cluster"  
+# }
+
+# variable "VAULT_TOKEN" {
+#     type = string
+#     description = "Token to access vault"  
+# }
