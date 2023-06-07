@@ -38,30 +38,6 @@ variable "admin_password" {
     description = "password of the local admin user"
 }
 
-# variable "image_publisher" {
-#     type = string
-#     description = "Azure image publisher"
-#     default = "myPublisher"
-# }
-
-# variable "image_offer" {
-#     type = string
-#     description = "Azure image offer"
-#     default = "myOffer"
-# }
-
-# variable "image_sku" {
-#     type = string
-#     description = "Azure image sku"
-#     default = "mySKU"
-# }
-
-# variable "image_version" {
-#     type = string
-#     description = "Azure image sku"
-#     default = "0.0.1"
-# }
-
 variable "image_id" {
     type = string
     description = "Azure shared image id"    

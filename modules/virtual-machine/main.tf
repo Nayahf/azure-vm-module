@@ -1,5 +1,5 @@
 # Create virtual machine
-resource "azurerm_linux_virtual_machine" "my_terraform_vm" {
+resource "azurerm_linux_virtual_machine" "new_vm" {
     name                  = var.vmname
     resource_group_name   = var.resource_group_name
     location              = var.location
@@ -16,11 +16,4 @@ resource "azurerm_linux_virtual_machine" "my_terraform_vm" {
     }
 
     source_image_id = var.image_id
-
-  # source_image_reference {
-  #   publisher = var.image_publisher
-  #   offer     = var.image_offer
-  #   sku       = var.image_sku
-  #   version   = var.image_version
-  # }
 }
